@@ -1,0 +1,91 @@
+@charset "utf-8";
+section{margin:0 auto;}
+#keyimage{
+    width:100%; height:420px;
+    background-color:#000;
+    background-image:url(../images/bg.jpg);
+    background-repeat:no-repeat;
+    background-position:center top;
+}
+#moveothers{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+article{
+
+
+    height: 25%;
+    display: block;
+    color: white;
+}
+article a{
+    display: block;
+    width: auto;
+    text-decoration: none;
+    margin: 5px;
+}
+.Content{
+    position: relative;
+    /* 중심이 되는 위치 지정 */
+    display: inline-block;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-left: 100px;
+}
+.Content .Left{
+    float: left;
+    /* 왼쪽으로 위치 지정 */
+}
+.Content h1{
+    position: absolute;
+    /* 절대 위치 */
+    z-index: 2;
+    /* 숫자가 클수록 z축 방향으로 위쪽에 위치함로 z-index가 1보다 위쪽에 존재 */
+    bottom: 400px;
+    /* 기준으로 부터 아래에서px  */
+    left: 50px;
+    /* 기준으로 부터 왼쪽으로 px */
+    color: #000;
+    /* text 색깔 변경 */
+}
+.Content p{
+    position: absolute;
+    bottom: 150px;
+    left: 100px;
+    line-height: 70px;
+    font-size: 40px;
+    z-index: 2;
+}
+.Content .Move a{
+    position: absolute;
+    z-index: 2;
+    font-size: 20px;
+    bottom: 100px;
+    left: 200px;
+    line-height: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+.Content img{
+    width: 500px;
+}
+.firstImg{
+    position: absolute;
+    z-index: 2;
+
+    top: 150px;
+    left: 450px;
+    float: right;
+}
+
+.secondImg{
+    position: absolute;
+    z-index: 2;
+    top: 150px;
+    left: 450px;
+    float: right;
+}

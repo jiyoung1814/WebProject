@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>WepProgramingProject</title> <!--2.title-->
+        <link href="css/basic.css" rel="stylesheet"><!--4. CSS 스타일 시트를 해당 경로에 저장하고 <link> 태그로 불러 사용-->
+        <script>
+            var text = new Array("Anroid","iOS","Samsung","KaiOS", "Unknow", "Linux")
+            var world = new Array(78.81,27.43,0.38,0.14,0.14,0.02);
+            var korea = new Array(78.03,25.63,0.33,0.01,0,0);
+            var usa = new Array(59.97,39.76,0.22,0.01,0.01,0.01);
+            var europe = new Array(65.81,34,0.09,0.04,0.04,0.01);
+
+            var t = this.parentElement;
+
+            function drawGrap(){
+                var cont = document.getElementById("contries");
+                var can  = document.getElementById("canvas");
+                var d = document.getElementById("check");
+                var context = can.getContext("2d");
+                context.clearRect(0,0,can.width, can.height); //기존 그림 지우기
+                
+                var which = new Array();
+                for(var i=0;i<4;i++){
+                    if(cont.option[cont.selectedIndex].value == 'w')
+                        which[i] = world[i];
+                    else if(cont.option[cont.selectedIndex].value == 'k')
+                        which[i0] = korea[i];
+                    else if(cont.option[cont.selectedIndex].value == 'u')
+                        which[i] = usa[i];
+                    else if(cont.option[cont.selectedIndex].value == 'e')
+                        which[i] = europe[i];
+                    else return;
+                }
+                
+
+                var x = can.width/2;
+                var y = can.height/2;
+                var small = (x<y)?x:y;
+                var radius = small -20;
+                var startAngle = 0;
+                var endEngle = 0;
+                for(var i =0;i<which.length;i++){
+                    var rad = 2*Math.Pi*n/total;
+                    endAngle = startAngle + rad;
+
+                    context.beginPath();
+                    context.moveTo(x,y);
+                    cont.arc(x,y,radius,startAngle, endEngle);
+
+                    context.fill();
+                    context.stroke();
+                    startAngle = endEngle;
+                }
+
+                context.font = "nomarl";
+                context.fillStyle = "blue";
+                for(var i =0 ;i<which.length;i++){
+                    var n = which[i];
+                    var percentage = Math.floor(n/4*100);
+                    // context.fillText()
+                }
+
+            }
+        </script>
+
+    </head>
+    <body onload="drawGraph()">
+        <header style="background-color: white;"><!--3. 시맨틱 태그(페이지나 섹션의 머리말 표현)-->
+            <div id="logo">
+                <a href="Project.html"><img src="images/Logo2.png"></a>
+            </div>
+            <nav id="menubar" style="background-color: white;"><!--3. 시멘틱 태그(하이퍼링크들을 모아 놓은 특별한 섹션으로 페이지 내 목차를 만들었다.)-->
+                <ul> <!--2. 리스트 만들기-->
+                    <li id="definitionSection" ><a href="#Definition" style="color: black;">안드로이드란</a></li> <!--2. 하이퍼 링크: 앵커(HTML내의 특정 위치 호출)-->
+                    <li id="twelveSection"><a href="#Twelve"  style="color: black;">Android 12</a></li>
+                    <li id ="marketShairSection"><a href="#marketShair"  style="color: black;"> 점유율</a></li> 
+                    <li id="developerSection" ><a href="#developer" style="color: black;">개발 지원</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="cover" style="width: 100%; height: 300px; background-color: rgb(7, 48, 66);">
+            <div style="color: white; font-size: 100px;  line-height: 80px; padding: 30px;">Android <br> MarketShair</div>
+            <div style="color: white; font-size: 20px; padding: 30px; float: left;">원하시는 국가를 선택 해주세요</div>
+            <div style="color: white; font-size: 15px;float: right; padding: 30px;">2021년 3월 기준, 출처: statcounter</div>
+            
+            <form style="float: center; padding: 30px;">
+                <select id="contries" onchange="drawGrap()">
+                <option value="w" selected>Worldwide</option>
+                <option value="k">Korea</option>
+                <option value="u">USA</option>
+                <option value="e">Europe</option>
+                </select>
+            </form>
+            <canvas id="canvas" width="600" height="400"></canvas>
+        </div>
+
+        
+        <div id="check"></div>
+        
+    </body>
+</html>

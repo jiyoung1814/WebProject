@@ -1,0 +1,108 @@
+@charset "utf-8";
+#menubar ul .definitionSection a{
+    color: rgb(61, 219, 132);
+}
+
+.title ul{
+    list-style: none;
+    text-align: center;
+}
+
+.title ul li a{
+    text-decoration: none;
+}
+
+.Explain{
+    border: 1px solid lightgray;
+    padding: 30px;
+}
+
+.Explain .Text{
+    font-size: 30px;
+    color: black;
+    font-weight: 900;
+    line-height: 150%;
+    margin: 50px;
+}
+.Explain .Text .f{
+    /* font-size: 30px; */
+    /* margin-left: 50px;
+    margin-top: 20px; */
+    color: black;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 150%;
+    text-align: left;
+    float: left;
+}
+
+.Explain .Text .s{
+    font-size: 15px;
+}
+
+.View{
+    text-align: center;
+    max-width: 1000px; /* 최대 가로 길이 */
+    width: 100%; /* 가로 넓이*/
+    margin: 0 auto;/* block 요서 외부 간격 (top,bottom: 0, 가로: 유동적)*/
+}
+.View ul{
+    font-size: 0;
+}
+ 
+.View ul li{
+    display: inline-block;
+    /* 5. 배치: inlin-box 속성으로 설정하여 새 라인에서 시작하지 
+    못하며 옆에 다른 요소도 배치가 가능하지만 넓이와 높이를 조절하지 
+    못하고 여백 크기도 조절할 수 없다.*/
+    vertical-align: top;/* inline의 세로 정렬 설정*/
+    width: 33.3%; /*  가로 크기 비율*/
+    border: 1px, solid lightgray;
+}
+.View ul li a{
+    display: block;
+    width: auto;
+    text-decoration: none; /*하이퍼링크 태그로 인한 밑줄 제거*/
+    margin: 5px;
+}
+
+.screen{
+    position: relative; /* 상대 배치의 기본 위치로 설정 */
+    overflow: hidden;/* 요소 외 속성 가리기 => 이벤트를 줄때 까지 */
+}
+
+.screen .Top{
+    position: absolute;/*절대 배치*/
+    bottom: 150%;
+    left: 30px;
+    z-index: 2; /* z-index를 통해 수직 위치를 정해 주었다 */
+    font-size: 26px;
+    font-weight: 900;
+    text-decoration: none;
+    color:rgb(67, 133, 245);
+    transition: all .35s; 
+    /* 5. 태그 동적 변화(CSS의 프로퍼티 값의 변화를 서서히 진행 시켜 애니메이션 효과를 생성)
+    */
+}
+
+.screen .Bottom{
+    position: absolute;
+    bottom: 20%;
+    left: 30px;
+    z-index: 2;
+    font-size: 12;
+    color:rgb(61  , 133, 245);
+    transition: all .35s;
+}
+
+.View a:hover .Top{
+    bottom: 52%;
+}
+.View a:hover .Bottom{
+    top: 72%;
+}
+
+
+.screen img{
+    width: 100%;
+}

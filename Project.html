@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> 
+    <title>WepProgramingProject</title> <!--2.title-->
+    <link href="css/basic.css" rel="stylesheet"><!--4. CSS 스타일 시트를 해당 경로에 저장하고 <link> 태그로 불러 사용-->
+    <link href="css/css.css" rel="stylesheet">
+</head>
+<body>
+    <header><!--3. 시맨틱 태그(페이지나 섹션의 머리말 표현)-->
+        <div id="logo">
+            <a href="Project.html"><img src="images/androidLogo.jpg"></a>
+        </div>
+        <nav id="menubar"><!--3. 시멘틱 태그(하이퍼링크들을 모아 놓은 특별한 섹션으로 페이지 내 목차를 만들었다.)-->
+            <ul> <!--2. 리스트 만들기-->
+                <li id="definitionSection"><a href="#Definition">안드로이드란</a></li> <!--2. 하이퍼 링크: 앵커(HTML내의 특정 위치 호출)-->
+                <li id="twelveSection"><a href="#Twelve">Android 12</a></li>
+                <li id ="marketShairSection"><a href="#marketShair"> 점유율</a></li> 
+                <li id="developerSection"><a href="#developer">개발 지원</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="keyimage"><!--3. 시맨틱 태그(문서의 장 혹은 절을 구성하는 역활)-->
+    </section>
+
+    <section id="moveothers">
+        <article><!--3. 시멘틱 태그 본문과는 관련이 있지만 독립적인 컨텐츠를 담는 영역이다.-->
+            <a id="Definition"> <!--2.하이퍼링크 앵커(해당 위티로 이동시킨다) -->
+                <div class="Content">
+                    <div class="Left">
+                        <h1>Android?</h1>
+                        <p>모바일의 가능성에<br>
+                            변화를 가져다주는<br>
+                            플랫폼</p>
+                        <div class="Move"><a href="definition.html">자세히 알아보기 &gt;</a></div>
+                        <img src="images/firstContent.png" alt="firstContent"><!--2.이미지 삽입-->
+                    </div>
+
+                    <div class="firstImg">
+                        <img src="images/firstImg.jpg" alt="firstImg" width="400px">
+                    </div>
+                </div>
+            </a>
+        </article>
+       
+        <article>
+            <a id="Twelve">
+                <div class="Content">
+                    <div class="Left">
+                        <h1>Android 12</h1>
+                        <p>더욱 개인화 되고,<br>
+                            안전하며, 간편한<br>
+                            환경</p>
+                        <div class="Move"><a href="twelve.html">자세히 알아보기 &gt;</a></div>
+                        <img src="images/secondContent.png" alt="secondContent">
+                    </div>
+                    <div class="secondImg">
+                        <img src="images/secondImg.jpg">
+                    </div>
+                </div>
+               
+            </a>
+        </article>
+
+        <article>
+            <a id="Third">
+                <div class="Content">
+                    <div class="Left">
+                        <h1>Market Share</h1>
+                        <p>Worldwide,<br>
+                            Korea<br>
+                            America,Europe</p>
+                        <div class="Move"><a href="marketShair.html">자세히 알아보기 &gt;</a></div>
+                        <img src="images/thirdContent.png" alt="thirdContent">
+                    </div>
+                    <div class="thridImg">
+                        <img src="images/thirdImg.jpg">
+                    </div>
+                </div>
+            </a>
+        </article>
+        
+        <article>
+            <a id="Forth">
+                <div class="Content">
+                    <div class="Left">
+                        <h1>Developers</h1>
+                        <p>개발자를 위한<br>
+                            Android<br>
+                            <span style="font-size: 20px;">최신문서, CodeLab 가이드, 사전 미리보기</span></p>
+                        <div class="Move"><a href="developer.html">자세히 알아보기 &gt;</a></div> <!--2.심볼 입력-->
+                        <img src="images/forthContent.png" alt="forthContent">
+                    </div>
+                    <div class="forthImg">
+                        <img src="images/forthImg.png">
+                    </div>
+                </div>
+            </a>
+        </article>
+    </section>
+    
+
+    <footer><!--3. 시멘틱 태그(꼬리말 영역으로 주로 저자나 저작권 정보를 작성한다)-->
+        <!-- <div id="subfooter">
+            <address>
+                이용약관 | 이메일주소무단수집거부 | 사이트맵 | 사이버감사실 <br>
+                COPYRIGHT 2019. HYUNDAI MOBIS. ALL RIGHTS RESERVED. 
+            </address>
+            <div id="familysite">   
+                <select>
+                <optgroup label="공과대학">
+                    <option value="archi">건축공학과</option>
+                    <option value="mechanic">기계공학과</option>
+                    <option value="multi" selected>멀티미디어학과</option>
+                </optgroup>
+                <optgroup label="인문대학">
+                    <option value="history">사학과</option>
+                    <option value="lang">어문학부</option>
+                    <option value="philo">철학</option>   
+                </optgroup>
+                </select>
+                &nbsp;<input type="submit" value="이동">
+            </div>
+        </div> -->
+    </footer>
+</body>
+</html>
